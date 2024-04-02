@@ -10,8 +10,8 @@ interface User {
 }
 
 const users: User[] = [
-  { id: 1, username: "Mims", password: "Dembele", role: "user" },
-  { id: 2, username: "Miracle", password: "ansufatii", role: "admin" },
+  { id: 1, username: "Favour", password: "Afere", role: "user" },
+  { id: 2, username: "Ozioma", password: "password345", role: "admin" },
 ];
 
 async function loginUser(req: Request, res: Response) {

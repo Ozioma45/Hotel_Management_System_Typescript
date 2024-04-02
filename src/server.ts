@@ -8,7 +8,7 @@ import authRoutes from "./route/auth.route";
 
 // Initialize Express application
 const app = express();
-const PORT = process.env.PORT || 6000;
+const PORT = process.env.PORT || 4000;
 
 // Connect to MongoDB database
 connectDB();
