@@ -1,21 +1,15 @@
-import mongoose from "mongoose";
+import { Schema, model } from "mongoose";
 
-const roomSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
+const RoomType = new Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
   },
-  roomType: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "RoomType",
-    required: true,
-  },
-  price: {
-    type: Number,
-    required: true,
-  },
-});
+  { timestamps: true }
+);
 
-const Room = mongoose.model("Room", roomSchema);
+const RoomTypeModel = model("room-types", RoomType);
 
-export default Room;
+export default RoomTypeModel;

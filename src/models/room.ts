@@ -1,15 +1,26 @@
-import { Schema, model } from "mongoose";
+import mongoose, { Schema, Document } from "mongoose";
 
-const RoomType = new Schema(
-  {
-    name: {
-      type: String,
-      required: true,
-    },
+interface IRoom extends Document {
+  name: string;
+  roomType: string;
+  price: number;
+}
+
+const roomSchema: Schema = new Schema({
+  name: {
+    type: String,
+    required: true,
   },
-  { timestamps: true }
-);
+  roomType: {
+    type: String,
+    required: true,
+  },
+  price: {
+    type: Number,
+    required: true,
+  },
+});
 
-const RoomTypeModel = model("room-types", RoomType);
+const Room = mongoose.model("Room", roomSchema);
 
-export default RoomTypeModel;
+export default Room;
