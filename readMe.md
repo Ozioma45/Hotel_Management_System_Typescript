@@ -14,6 +14,10 @@ This project is a Hotel Management System developed using TypeScript, Express.js
 - **Validation**: Data validation using Joi schema.
 - **Error Handling**: Proper error handling for API requests.
 
+## Deployment
+
+The project is deployed and accessible at [https://hotel-management-system-typescript.onrender.com/](https://hotel-management-system-typescript.onrender.com/).
+
 ## Prerequisites
 
 - Node.js
